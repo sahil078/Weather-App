@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather Sans", sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: url("./Images/wb.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* wrapper */
+.wrapper{
+    height: 15vh;
+    width: 100vw;
+    padding:1vh;
+    padding-top: 2vh;
+    background-color: rgba(255, 255, 255, 0.063);
+    color: black;
+    backdrop-filter: blur(10px);
+}
+.wrapper h1{
+    text-align: center;
+    font-size: 2rem;
+}
+.tabContainer{
+    padding-top: 3vh;
+    display: flex;
+    justify-content: space-around;
+}
+.tabContainer p{
+    padding: 0.4vw;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-style: italic;
+}
+.tabContainer p:hover{
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    box-shadow: 5px 4px 5px 2px whitesmoke;
+}
+.tabContainer p:active{
+    scale: 0.9;
+}
+.tab {
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+    text-transform: capitalize;
+    /* font-weight: 600; */
+}
+
+
+
+/* container */
+.container{
+    margin-block: 4rem;
+}
+
+.btn {
+    all: unset;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(34, 72, 143, 0.782);
+    box-shadow: 5px 4px 5px 2px whitesmoke;
+}
+
+.subContainer {
+    width: 90%;
+    max-width: 50vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Container */
+.formContainer {
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+}
+.formContainer .btn {
+    width: 40px;
+    height: 40px;
+}
+.formContainer.active {
+    display: flex;
+}
+
+.formContainer input {
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(5, 55, 156, 0.5);
+    border-radius: 10px;
+}
+
+.formContainer input:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.formContainer input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.formContainer .btn {
+    width: 40px;
+    height: 40px;
+    /* display: grid;
+    place-items: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: unset;
+    border-radius: 100%;
+}
+.form-container .btn img {
+    object-fit: contain;
+}
+
+/* grant Location  */
+.grantLocationContainer {
+    display: none;
+}
+
+.grantLocationContainer.active {
+    display: flex;
+    border: 2px solid rgb(251, 251, 251);
+    padding: 2vh;
+    height: 50vh;
+    width: 30vw;
+    background-color: rgba(255, 255, 255, 0.408);
+    color: black;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 10px 10px 15px 2px rgb(225, 143, 143);
+}
+
+.grantLocationContainer img {
+    margin-bottom: 1.5rem;
+}
+
+.grantLocationContainer p:first-of-type {
+    font-weight: 600;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.grantLocationContainer p:last-of-type {
+    font-size: 0.75rem;
+    text-align: center;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    font-weight: 300;
+    letter-spacing: 0.75px;
+}
+
+/* Grant Location End  */
+
+.loadingContainer {
+    display: none;
+}
+
+.loadingContainer.active {
+    display: flex;
+}
+
+.loadingContainer p {
+    text-transform: uppercase;
+}
+
+.userInfoContainer {
+    display: none;
+}
+
+.userInfoContainer.active {
+    display: flex;
+}
+
+.userInfoContainer p {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.userInfoContainer img {
+    height: 70px;
+    width: 70px;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 0.7rem;
+}
+
+.name img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.userInfoContainer p[data-temp] {
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.userInfoContainer p[data-weatherDesc] {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+
+.parameterContainer {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    gap: 10px 20px;
+    margin: 1.6rem auto 0;
+    flex-wrap: wrap;
+}
+
+.parameter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(219, 226, 239, 0.5);
+    padding: 0.8rem;
+    border-radius: 5px;
+    width: 30%;
+    max-width: 200px;
+    gap: 5px 0;
+}
+
+.parameter p {
+    font-size: 1rem;
+    font-size: 600;
+    text-transform: uppercase;
+}
+
+.parameter img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.parameterValue {
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+.errorContainer {
+    display: none;
+}
+
+.errorContainer.active {
+    display: flex;
+    gap: 1rem 0;
+}
+
+.errorContainer p {
+    text-align: center;
+}
+
+.errorContainer img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+@media (max-width: 640px){
+    .tabContainer p{
+        font-size: 1rem;
+        font-weight: 700;
+        font-style: italic;
+        padding: 0.5vw;
+    }
+
+    .parameter {
+        width: 25vw;
+    }
+    .subContainer {
+        width: 100%;
+        max-width: 100vw;
+    }
+
+}
+
+@media (max-width: 450px){
+    .tabContainer p{
+        font-size: 1rem;
+        font-weight: 700;
+        font-style: italic;
+        padding: 0.5vw;
+    }
+    .parameterContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .parameter {
+        width: 28vw;
+    }
+    .subContainer {
+        width: 100%;
+        max-width: 100vw;
+    }
+    
+}
+
